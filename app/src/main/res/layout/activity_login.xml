@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activites.loginActivity">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:src="@drawable/auth_screens_background"/>
+
+        <ImageView
+            android:layout_width="@dimen/login_logo_width"
+            android:layout_height="@dimen/login_logo_height"
+            android:src="@drawable/tutorials_eu_logo"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            app:tint="@color/white"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.example.myshoppal.Utils.MSPBoldText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/login_text_margin_top"
+            android:textSize="@dimen/login_text_size"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/login_ed_lyt_padding"
+            android:layout_marginTop="@dimen/login_ed_lyt_margin_top"
+            android:layout_marginStart="@dimen/login_ed_lyt_margin_start"
+            android:layout_marginEnd="@dimen/login_ed_lyt_margin_end"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_id_login">
+
+                <com.example.myshoppal.Utils.MSPediteText
+                    android:id="@+id/login_email_text"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/login_ed_password_margin_top"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/login_ed_password_hint">
+
+                <com.example.myshoppal.Utils.MSPediteText
+                    android:id="@+id/login_password_text"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/login_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_text_forget_password"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/login_text_forget_password_margin_top"
+                android:textSize="@dimen/login_text_forget_password_size"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/login_lyt_button_margin_top"
+        android:padding="@dimen/login_lyt_button_padding"
+        android:layout_marginEnd="@dimen/login_lyt_button_margin_end_size"
+        android:layout_marginStart="@dimen/login_lyt_button_margin_start_size">
+
+        <com.example.myshoppal.Utils.MSPbutton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_BTN"
+            android:textSize="@dimen/login_button_text_size"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/login_lyt_register_margin_top_size"
+        android:layout_marginStart="@dimen/login_lyt_register_margin_start"
+        android:layout_marginEnd="@dimen/login_lyt_register_margin_end"
+        android:padding="@dimen/login_lyt_register_padding"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dont_have_an_account_text"
+            android:textSize="@dimen/login_dont_have_account_text_size"/>
+
+        <TextView
+            android:id="@+id/login_register_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_register_text"
+            android:textSize="@dimen/login_register_text_size"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
